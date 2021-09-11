@@ -1,4 +1,4 @@
-import React, {useEffect, useState,} from 'react';
+import React, {useState,} from 'react';
 import {
     makeStyles, Container, Typography, TextField, Button, Box, FormControl,
     Table, TableBody, TableContainer, TableHead, TableRow, TableCell
@@ -27,7 +27,6 @@ type imageUrlProps = {
 export default function App(): JSX.Element {
     const [data, setData] = useState<imageUrlProps[]>([])
     const [url, setUrl] = useState("")
-    const [count, setCount] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
 
 
@@ -36,12 +35,6 @@ export default function App(): JSX.Element {
         setData(result.data)
         setIsLoading(true)
     }
-
-    useEffect(() => {
-         getUrl(url)
-    }, [url])
-    console.log(data)
-
 
     const classes = useStyle();
     return (
@@ -78,7 +71,7 @@ export default function App(): JSX.Element {
                         size="large"
                         className={classes.margin}
                         startIcon={<FindInPageIcon/>}
-                        onClick={() => setCount(count + 1)}
+                        onClick={() => getUrl(url)}
                     >
                         ANALYZE
                     </Button>
