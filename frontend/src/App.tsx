@@ -1,7 +1,7 @@
 import React, {useEffect, useState,} from 'react';
 import {
-    makeStyles, Container, Typography, TextField, Button, Box, FormControl, Paper,
-    Table, TableBody, TableContainer, TableHead, TableRow,TableCell
+    makeStyles, Container, Typography, TextField, Button, Box, FormControl,
+    Table, TableBody, TableContainer, TableHead, TableRow, TableCell
 } from "@material-ui/core";
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import axios from "axios";
@@ -30,16 +30,18 @@ export default function App(): JSX.Element {
     const [count, setCount] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-        getUrl(url)
-    }, [count])
-    console.log(data)
 
     const getUrl = async (url: string) => {
         let result = await axios.get(`https://lf-exam-v2.web.app/api/analyze?imageUrl=${url}`)
         setData(result.data)
         setIsLoading(true)
     }
+
+    useEffect(() => {
+         getUrl(url)
+    }, [url])
+    console.log(data)
+
 
     const classes = useStyle();
     return (
