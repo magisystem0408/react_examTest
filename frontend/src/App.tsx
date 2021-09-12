@@ -98,8 +98,8 @@ export default function App(): JSX.Element {
                                 ))}
                             </TableBody>
                         </Table>
-                    </TableContainer> :
-                    <div></div>
+                    </TableContainer>
+                    :null
                 }
             </Container>
 
