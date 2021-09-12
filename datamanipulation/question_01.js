@@ -6,15 +6,18 @@ const items = {
     quux: null
 }
 
-const paramslist = []
 
-//pythonでいうemulate関数でkeyとvalueを分ける
-for (const [_, value] of Object.entries(items)) {
-    // valueのなかで実数のものを弾き出す
-    if (value != null && value.num != null) {
-        //該当するものをpushする
-        paramslist.push(value)
+const result =(items)=>{
+    const paramsList =[]
+    // pythonでいうemulate関数でkeyとvalueを分ける
+    for (const[_,value] of Object.entries(items)){
+        // valueのなかで実数のものを弾き出す
+        if (value !=null && value.num !=null){
+            //該当するものをpushする
+            paramsList.push(value)
+        }
     }
+    console.log(paramsList)
 }
 
-console.log(paramslist)
+result(items)
