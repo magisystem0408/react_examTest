@@ -7,12 +7,12 @@ const items = {
 }
 
 
-const result =(items)=>{
-    const paramsList =[]
+const result = (items) => {
+    const paramsList = []
     // pythonでいうemulate関数でkeyとvalueを分ける
-    for (const[_,value] of Object.entries(items)){
+    for (const [_, value] of Object.entries(items)) {
         // valueのなかで実数のものを弾き出す
-        if (value !=null && value.num !=null){
+        if (value != null && value.num != null) {
             //該当するものをpushする
             paramsList.push(value)
         }
