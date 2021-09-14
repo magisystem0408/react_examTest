@@ -11,6 +11,9 @@
 - https://qiita.com/popy1017/items/78cd72cd6337973c3b65
 
 ## heroku 
-https://reffect.co.jp/react/front-react-back-node
+- https://reffect.co.jp/react/front-react-back-node
 
+
+## prettierの設定
+- https://qiita.com/shinshin86/items/c8b1f6b22b1bef3074c7
 
