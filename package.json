@@ -15,5 +15,10 @@
     "@google-cloud/vision": "^2.4.0",
     "express": "^4.17.1",
     "prettier": "^2.4.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2
   }
 }
